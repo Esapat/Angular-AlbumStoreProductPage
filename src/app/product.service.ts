@@ -20,6 +20,6 @@ constructor(private _http: Http) {}
 
   }
   getProducts(): Observable<Product[]> {
-    this._http.get(this._productsUrl).map(response => <Product[]>response.json());
+    return this._http.get(this._productsUrl).map(response => <Product[]>response.json());
   }
 }
